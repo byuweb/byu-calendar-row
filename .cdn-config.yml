@@ -1,0 +1,9 @@
+---
+name: BYU Calendar Row component
+description: BYU Calendar Row component for styling calendar events for full page displays
+resources:
+  - src: dist/**
+    dest: ./
+entrypoints:
+  bootstrap.js: 'Examines browser support and downloads the appropriate component bundle'
+docs: https://github.com/byuweb/byu-calendar-row
