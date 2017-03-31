@@ -5,6 +5,7 @@
 <!-- Use the id "title" for title -->
 <!--<div class="byu-calendar-tile" >-->
 <div class="section-first">
+	<p> This is an image version.</p>
 	<slot id="image" name="image"></slot>
 	<!--<slot id="date" name="date">   </slot>-->
 	<!--<div id="month-name" class="content" ></div>-->
@@ -12,13 +13,30 @@
 	<!--<div id="year" class="content" ></div>-->
 </div>
 <div class="section-second">
-	<slot id="title" class="content" name="title">  </slot>
-	<slot id="time" class="content" name="time">   </slot>
-	<slot id="location" class="content" name="location"></slot>
-	<slot id="price" class="content" name="price"></slot>
-	<slot id="link" class="content" name="link"></slot>
-	<slot id="tickets-link" class="content" name="tickets-link"></slot>
+	<div id="title">
+		<slot class="content" name="title">  </slot>
+	</div>
+	<div id="time">
+		<slot class="content" name="time">   </slot>
+	</div>
+
+	<div id="location">
+		<slot class="content" name="location"></slot>
+	</div>
+	<div id="price">
+		<slot class="content" name="price"></slot>
+	</div>
+	<div id="link">
+		<slot class="content" name="link"></slot>
+	</div>
+
 </div>
+<div class="section-third">
+	<div id="tickets-link">
+		<slot id="tickets-link" class="content" name="tickets-link"></slot>
+	</div>
+</div>
+
 <!--</div>-->
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="../dist/components.js"></script>
+	<script src="../dist/byu-calendar-row.min.js"></script>
 	<style>
 		h2 {
 			color: red;
@@ -10,26 +10,26 @@
 </head>
 <body>
 <h1>Calendar Widget Tile Styles</h1>
-<p>Here is an example of the tile Tile style</p>
+<p>Here is an example of the Tile style - these do not require additional day headers
+	above them to group them, because they display all date information in each row.</p>
 
-<div class="row-container" style="display: flex; flex-wrap: wrap; ">
+<div class="row-container" >
 	<byu-calendar-row type="tile">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-02-15</p>
-		<a href="www.google.com" slot="title">My Event Title</a>
+		<a href="https://calendar.byu.edu" slot="title">My Event Title</a>
 
 		<p slot="time">7:00 PM</p>
 		<p slot="location">Wilkinson Ballroom</p>
 		<p slot="price">$5.00</p>
-		<a href="www.google.com" slot="link">SEE FULL EVENT</a>
-		<!--<a href="www.google.com" slot="tickets-link">TICKETS</a>-->
-		<p slot="tickets-link">www.google.com</p>
+		<a href="https://calendar.byu.edu" slot="link">SEE FULL EVENT</a>
+		<a href="http://www.facebook.com" slot="tickets-link">TICKETS</a>
 
 	</byu-calendar-row>
 	<byu-calendar-row type="tile">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-02-18</p>
-		<a href="www.google.com" slot="title">My Event Title That is Really Long About Some Cool Educational Topics</a>
+		<a href="http://www.google.com" slot="title">My Event Title That is Really Long About Some Cool Educational Topics</a>
 		<p slot="time">10:00 AM</p>
 		<!--<p slot="location">Marriott</p>-->
 
@@ -37,45 +37,46 @@
 	<byu-calendar-row type="tile">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-03-01</p>
-		<a href="www.google.com" slot="title">The Conference You All Want To Go To</a>
+		<a href="http://www.google.com" slot="title">The Conference You All Want To Go To</a>
 		<p slot="time">12:30 PM</p>
 		<p slot="location">Wilkinson Ballroom</p>
 
 	</byu-calendar-row>
 </div>
 
-<p>Here is an example of the Horizontal Tile style</p>
+<p>Here is an example of the Image Tile style - these are meant to be displayed underneath a header of that particular day. </p>
 
 <div class="row-container" >
 	<byu-calendar-row type="image">
+		<img slot="image" src="https://calendar-test.byu.edu/sites/default/files/styles/thumbnail/public/Arts_600x600.jpg">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-02-15</p>
-		<a href="www.google.com" slot="title">My Event Title</a>
+		<a href="http://www.google.com" slot="title">My Event Title</a>
 		<!-- This time should include only the *Start time* not the end time, this field will be trimmed after 8 characters -->
 		<p slot="time">7:00 PM</p>
-		<!-- type horizontal is the only one that allows displaying the description  -->
+		<!-- type image is the only one that allows displaying the description  -->
 		<p slot="description">This is an introduction paragraph that should be very short.</p>
 		<p slot="location">Wilkinson Ballroom</p>
 
 	</byu-calendar-row>
-	<byu-calendar-row type="horizontal">
+	<byu-calendar-row type="image">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-02-15</p>
-		<a href="www.google.com" slot="title">My Event Title</a>
+		<a href="http://www.google.com" slot="title">My Event Title</a>
 		<!-- This time should include only the *Start time* not the end time, this field will be trimmed after 8 characters -->
 		<p slot="time">7:00 PM</p>
-		<!-- type horizontal is the only one that allows displaying the description  -->
+		<!-- type image is the only one that allows displaying the description  -->
 		<p slot="description">This is an introduction paragraph that should be very short, or at least only a minimum length so it is not too long.</p>
 		<p slot="location">Wilkinson Ballroom</p>
 
 	</byu-calendar-row>
-	<byu-calendar-row type="horizontal">
+	<byu-calendar-row type="image">
 		<!-- This date should be provided in the format YYYY-MM-DD  -->
 		<p slot="date">2017-02-16</p>
-		<a href="www.google.com" slot="title">My Other Event</a>
+		<a href="http://www.google.com" slot="title">My Other Event</a>
 		<!-- This time should include only the *Start time* not the end time, this field will be trimmed after 8 characters -->
 		<p slot="time">4:00 PM</p>
-		<!-- type horizontal is the only one that allows displaying the description  -->
+		<!-- type image is the only one that allows displaying the description  -->
 		<p slot="description">This is an introduction paragraph that should be very short.</p>
 		<p slot="location">Wilkinson Ballroom</p>
 

@@ -1,4 +1,5 @@
-o'use strict';
+'use strict';
+const util = require('byu-web-component-utils');
 // these only need to be created or established once, so they are outside the class
 const tileTemplate = require('./tile-row.html');
 const imageTemplate = require('./image-row.html');
@@ -13,7 +14,7 @@ class ByuCalendarRow extends HTMLElement {
 
     constructor() {
         super();
-        this._shadowRoot = this.attachShadow({mode: 'open'});
+        this.attachShadow({mode: 'open'});
     }
     get type() {
         return this.getAttribute('type');
@@ -26,9 +27,9 @@ class ByuCalendarRow extends HTMLElement {
         }
     }
     get date(){
-        var dates = this.shadowRoot.querySelector("#date").assignedNodes();
+        var dates = this.shadowRoot.querySelector("#date-val").assignedNodes();
         if(dates.length){
-            var date = this.shadowRoot.querySelector("#date").assignedNodes()[0];
+            var date = this.shadowRoot.querySelector("#date-val").assignedNodes()[0];
             console.log(date.innerText);
             return new Date(date.innerText.trim());
         }
@@ -38,9 +39,11 @@ class ByuCalendarRow extends HTMLElement {
     }
     connectedCallback(){
         // identify which template to use
-        this._shadowRoot.innerHTML = this.type === 'image' ? imageTemplate : tileTemplate;
+        let template = this.type === 'image' ? imageTemplate : tileTemplate;
+        util.applyTemplate(this, 'byu-calendar-row', template, () => {
+            //apply listeners and such here
 
-        var dateOb = this.date;
+            var dateOb = this.date;
         console.log(dateOb);
         // --- isolate parts of the date
         // get month
@@ -56,21 +59,24 @@ class ByuCalendarRow extends HTMLElement {
         var weekday = weekdays[dateOb.getDay()];
 
         // get year
-        var year = dateOb.getYear();
+        var year = dateOb.getFullYear();
 
         // set those date pieces as values in the tile's divs
         if(this.type == 'image') {
-            //this._shadowRoot.getElementById('month-abb').innerHTML = monthAbb;
+            //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
             // idk if need to do stuff here idk
-            this._shadowRoot.getElementById('weekday').innerHTML = weekday;
+            this.shadowRoot.querySelector('weekday').innerHTML = weekday;
         } else {
-            this._shadowRoot.getElementById('month-name').innerHTML = monthName;
-            this._shadowRoot.getElementById('year').innerHTML = year;
+            this.shadowRoot.querySelector('month-name').innerHTML = monthName;
+            this.shadowRoot.querySelector('year').innerHTML = year;
         }
-        this._shadowRoot.getElementById('day-number').innerHTML = day;
+        this.shadowRoot.querySelector('day-number').innerHTML = day;
+
+        });
 
     }
 }
+
 
 window.customElements.define('byu-calendar-row', ByuCalendarRow);
 window.ByuCalendarRow = ByuCalendarRow;
