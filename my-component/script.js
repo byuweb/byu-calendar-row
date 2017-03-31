@@ -65,12 +65,12 @@ class ByuCalendarRow extends HTMLElement {
         if(this.type == 'image') {
             //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
             // idk if need to do stuff here idk
-            this.shadowRoot.querySelector('weekday').innerHTML = weekday;
+            this.shadowRoot.querySelector('#weekday').innerHTML = weekday;
         } else {
-            this.shadowRoot.querySelector('month-name').innerHTML = monthName;
-            this.shadowRoot.querySelector('year').innerHTML = year;
+            this.shadowRoot.querySelector('#month-name').innerHTML = monthName;
+            this.shadowRoot.querySelector('#year').innerHTML = year;
         }
-        this.shadowRoot.querySelector('day-number').innerHTML = day;
+        this.shadowRoot.querySelector('#day-number').innerHTML = day;
 
         });
 

@@ -110,16 +110,19 @@ $ticket-region-width: 250px;
 #date, #date ::slotted(*) {
 	display: none;
 }
-
+#year {
+	letter-spacing: 3px;
+}
 .section-third {
 	padding-top: 8px;
-	width: 250px;
+	width: auto;
+	margin-left: auto;
 }
 
 
 // type specific styling
 
-:host([type='tile']) {
+:host/*([type='tile']) */ {
 	//width: 170px;
 
 	display: flex;
@@ -142,7 +145,7 @@ $ticket-region-width: 250px;
 	}
 
 	#month-name {
-		padding: 10px;
+		padding: 10px 0px;
 		font-size: 13px;
 		text-transform: uppercase;
 		margin-bottom: 0px;
@@ -184,7 +187,6 @@ $ticket-region-width: 250px;
 	}
 	#location ::slotted(*){
 		color: $medgray;
-		text-align: center;
 		font-weight: 500;
 		padding:  4px 0px;
 	}
@@ -194,7 +196,15 @@ $ticket-region-width: 250px;
 	}
 
 }
+
 :host([type='image'])  {
+
+	.section-first {
+		height: 100px;
+		width: 100px;
+	}
+}
+/*
 	width: 420px;
 	margin: 10px 15px;
 	display: flex;
@@ -264,9 +274,7 @@ $ticket-region-width: 250px;
 
 }
 
-:host ::slotted(img) {
-	display: none;
-}
+*/
 
 p, div, a {
 	font-family: "Gotham A", "Gotham B";
