@@ -203,6 +203,10 @@ $ticket-region-width: 250px;
 		height: 100px;
 		width: 100px;
 	}
+	#image ::slotted(*) {
+		width: 100px;
+		height: 100px;
+	}
 }
 /*
 	width: 420px;
@@ -282,3 +286,5 @@ p, div, a {
 h1, h2, h3, h4 {
 	font-family: "Sentinel A", "Sentinel B";
 }
+
+

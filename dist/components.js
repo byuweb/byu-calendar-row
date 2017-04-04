@@ -75,7 +75,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, ":host{padding:10px 0;border-bottom:1px solid #e5e5e5;margin-bottom:10px}.section-first{background:#e5e5e5;color:#002e5d}.section-second{padding:15px;color:#767676}:host .content{width:100%;display:flex;justify-content:center}:host .content,:host ::slotted(*){font-family:Gotham A,Gotham B}#title ::slotted(*){color:#002e5d!important;font-size:24px;font-weight:700;text-decoration:none}#location ::slotted(*){font-size:14px;text-transform:uppercase}#price ::slotted(*){font-weight:700;color:#4d8501}#time ::slotted(*){font-size:14px;text-transform:uppercase}#tickets-link ::slotted(*){text-align:center;background-color:#4d8501;padding:9px 15px;width:120px;font-size:12px;color:#fff;text-decoration:none}#tickets-link ::slotted(*):before{content:\"Price: \"}.section-second{min-height:100px;padding:0 15px 15px;display:block;width:100%;max-width:654px}#title ::slotted(*){line-height:1.2}#weekday{text-transform:uppercase;font-size:14px;padding-bottom:10px}#location ::slotted(*){color:#767676;font-size:12px;font-weight:500}#date,#date ::slotted(*){display:none}#year{letter-spacing:3px}.section-third{padding-top:8px;width:auto;margin-left:auto}:host{display:flex;flex-wrap:wrap;justify-content:flex-start;margin:10px 8px}:host .section-first{height:120px;width:120px;display:block;flex-wrap:wrap;justify-content:center;background:#e5e5e5;margin-bottom:15px}:host .section-second ::slotted(*){justify-content:flex-start}:host #month-name{padding:10px 0;font-size:13px;text-transform:uppercase;margin-bottom:0;font-weight:500}:host #day-number{font-size:48px;margin-bottom:5px;font-weight:700}:host #title ::slotted(*){color:#002e5d!important;font-size:18px;font-weight:700;text-align:center;padding:0 0 5px}:host #time ::slotted(*){font-size:14px}:host #location ::slotted(*){color:#767676;font-weight:500;padding:4px 0}:host #link ::slotted(*){color:#002e5d;text-decoration:none}:host([type=image]) .section-first{height:100px;width:100px}a,div,p{font-family:Gotham A,Gotham B}h1,h2,h3,h4{font-family:Sentinel A,Sentinel B}", ""]);
+exports.push([module.i, ":host{padding:10px 0;border-bottom:1px solid #e5e5e5;margin-bottom:10px}.section-first{background:#e5e5e5;color:#002e5d}.section-second{padding:15px;color:#767676}:host .content{width:100%;display:flex;justify-content:center}:host .content,:host ::slotted(*){font-family:Gotham A,Gotham B}#title ::slotted(*){color:#002e5d!important;font-size:24px;font-weight:700;text-decoration:none}#location ::slotted(*){font-size:14px;text-transform:uppercase}#price ::slotted(*){font-weight:700;color:#4d8501}#time ::slotted(*){font-size:14px;text-transform:uppercase}#tickets-link ::slotted(*){text-align:center;background-color:#4d8501;padding:9px 15px;width:120px;font-size:12px;color:#fff;text-decoration:none}#tickets-link ::slotted(*):before{content:\"Price: \"}.section-second{min-height:100px;padding:0 15px 15px;display:block;width:100%;max-width:654px}#title ::slotted(*){line-height:1.2}#weekday{text-transform:uppercase;font-size:14px;padding-bottom:10px}#location ::slotted(*){color:#767676;font-size:12px;font-weight:500}#date,#date ::slotted(*){display:none}#year{letter-spacing:3px}.section-third{padding-top:8px;width:auto;margin-left:auto}:host{display:flex;flex-wrap:wrap;justify-content:flex-start;margin:10px 8px}:host .section-first{height:120px;width:120px;display:block;flex-wrap:wrap;justify-content:center;background:#e5e5e5;margin-bottom:15px}:host .section-second ::slotted(*){justify-content:flex-start}:host #month-name{padding:10px 0;font-size:13px;text-transform:uppercase;margin-bottom:0;font-weight:500}:host #day-number{font-size:48px;margin-bottom:5px;font-weight:700}:host #title ::slotted(*){color:#002e5d!important;font-size:18px;font-weight:700;text-align:center;padding:0 0 5px}:host #time ::slotted(*){font-size:14px}:host #location ::slotted(*){color:#767676;font-weight:500;padding:4px 0}:host #link ::slotted(*){color:#002e5d;text-decoration:none}:host([type=image]) #image ::slotted(*),:host([type=image]) .section-first{height:100px;width:100px}a,div,p{font-family:Gotham A,Gotham B}h1,h2,h3,h4{font-family:Sentinel A,Sentinel B}", ""]);
 
 // exports
 
@@ -161,33 +161,33 @@ class ByuCalendarRow extends HTMLElement {
             //apply listeners and such here
 
             var dateOb = this.date;
-        console.log(dateOb);
-        // --- isolate parts of the date
-        // get month
-        var monthName = months[dateOb.getMonth()];
-        console.log(monthName);
-        // get month abbreviation
-        var monthAbb = monthAbbs[dateOb.getMonth()];
+            console.log(dateOb);
+            // --- isolate parts of the date
+            // get month
+            var monthName = months[dateOb.getMonth()];
+            console.log(monthName);
+            // get month abbreviation
+            var monthAbb = monthAbbs[dateOb.getMonth()];
 
-        // get day of the month
-        var day = dateOb.getDate();
+            // get day of the month
+            var day = dateOb.getDate();
 
-        // get day of week
-        var weekday = weekdays[dateOb.getDay()];
+            // get day of week
+            var weekday = weekdays[dateOb.getDay()];
 
-        // get year
-        var year = dateOb.getFullYear();
+            // get year
+            var year = dateOb.getFullYear();
 
-        // set those date pieces as values in the tile's divs
-        if(this.type == 'image') {
-            //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
-            // idk if need to do stuff here idk
-            this.shadowRoot.querySelector('#weekday').innerHTML = weekday;
-        } else {
-            this.shadowRoot.querySelector('#month-name').innerHTML = monthName;
-            this.shadowRoot.querySelector('#year').innerHTML = year;
-        }
-        this.shadowRoot.querySelector('#day-number').innerHTML = day;
+            // set those date pieces as values in the tile's divs
+            if(this.type == 'image') {
+                //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
+                // idk if need to do stuff here idk
+                this.shadowRoot.querySelector('#weekday').innerHTML = weekday;
+            } else {
+                this.shadowRoot.querySelector('#month-name').innerHTML = monthName;
+                this.shadowRoot.querySelector('#year').innerHTML = year;
+            }
+            this.shadowRoot.querySelector('#day-number').innerHTML = day;
 
         });
 

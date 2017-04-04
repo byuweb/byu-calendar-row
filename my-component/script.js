@@ -44,33 +44,33 @@ class ByuCalendarRow extends HTMLElement {
             //apply listeners and such here
 
             var dateOb = this.date;
-        console.log(dateOb);
-        // --- isolate parts of the date
-        // get month
-        var monthName = months[dateOb.getMonth()];
-        console.log(monthName);
-        // get month abbreviation
-        var monthAbb = monthAbbs[dateOb.getMonth()];
+            console.log(dateOb);
+            // --- isolate parts of the date
+            // get month
+            var monthName = months[dateOb.getMonth()];
+            console.log(monthName);
+            // get month abbreviation
+            var monthAbb = monthAbbs[dateOb.getMonth()];
 
-        // get day of the month
-        var day = dateOb.getDate();
+            // get day of the month
+            var day = dateOb.getDate();
 
-        // get day of week
-        var weekday = weekdays[dateOb.getDay()];
+            // get day of week
+            var weekday = weekdays[dateOb.getDay()];
 
-        // get year
-        var year = dateOb.getFullYear();
+            // get year
+            var year = dateOb.getFullYear();
 
-        // set those date pieces as values in the tile's divs
-        if(this.type == 'image') {
-            //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
-            // idk if need to do stuff here idk
-            this.shadowRoot.querySelector('#weekday').innerHTML = weekday;
-        } else {
-            this.shadowRoot.querySelector('#month-name').innerHTML = monthName;
-            this.shadowRoot.querySelector('#year').innerHTML = year;
-        }
-        this.shadowRoot.querySelector('#day-number').innerHTML = day;
+            // set those date pieces as values in the tile's divs
+            if(this.type == 'image') {
+                //this.shadowRoot.querySelector('month-abb').innerHTML = monthAbb;
+                // idk if need to do stuff here idk
+                this.shadowRoot.querySelector('#weekday').innerHTML = weekday;
+            } else {
+                this.shadowRoot.querySelector('#month-name').innerHTML = monthName;
+                this.shadowRoot.querySelector('#year').innerHTML = year;
+            }
+            this.shadowRoot.querySelector('#day-number').innerHTML = day;
 
         });
 
