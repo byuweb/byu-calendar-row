@@ -88,9 +88,10 @@ $ticket-region-width: 250px;
 	//max-width: 1024px - $tile-width - $ticket-region-width;
 
 }
-.section-second ::slotted(*) {
-	//width: 100%;
-	padding: 4px 0px;
+.section-second {
+	#time ::slotted(*), #location ::slotted(*), #price ::slotted(*), #link ::slotted(*) {
+		padding: 4px 0px;
+	}
 }
 #title ::slotted(*) {
 	//font-family: "Sentinel A", "Sentinel B";
