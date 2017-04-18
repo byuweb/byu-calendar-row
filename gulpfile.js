@@ -23,10 +23,10 @@ initWcBuild(gulp, {
     js: {
         input: './my-component/script.js'
     }
-    // if FOUC is added later, then specify that stylesheet here, to load styling before component loads
-    //css: {
-    //    input: './css/site.scss'
-    //}
+     //if FOUC is added later, then specify that stylesheet here, to load styling before component loads
+    css: {
+        input: './my-component/byu-calendar-row.scss'
+    }
 });
 
 gulp.task('build', ['wc:build']);

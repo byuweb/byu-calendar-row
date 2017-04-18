@@ -34,8 +34,6 @@ $ticket-region-width: 250px;
 }
 :host .content {
 	width: 100%;
-	display: flex;
-	justify-content: center;
 	font-family: "Gotham A", "Gotham B";
 }
 :host ::slotted(*){
@@ -48,11 +46,6 @@ $ticket-region-width: 250px;
 	font-size: 24px;
 	font-weight: bold;
 	text-decoration: none;
-}
-#location ::slotted(*) {
-	font-size: 14px;
-	padding: 4px 0px;
-	text-transform: uppercase;
 }
 .price-label ,
 #price ::slotted(*) {
@@ -69,19 +62,31 @@ $ticket-region-width: 250px;
 	margin: 0px;
 	text-transform: uppercase;
 }
+
+#location {
+	padding: 0px 0px 6px;
+}
+#location ::slotted(*) {
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
 #tickets-link ::slotted(*) {
 	text-align: center;
-	background-color: $green;
-	padding: 9px 15px;
+	background-color: $green!important;
+	padding: 9px 15px !important;
 	width: 120px;
 	font-size: 12px;
-	color:#fff;
+	color:#fff!important;
 	text-decoration: none;
 }
-#tickets-link ::slotted(*):before {
+#tickets-link ::slotted(:before) {
 	content: "Price: ";
+	display: inline;
 }
-.tickets-link ::slotted(*):hover {
+.tickets-link ::slotted(:hover) {
 	//background:
 }
 .section-second{
@@ -94,7 +99,10 @@ $ticket-region-width: 250px;
 	//align-self: flex-start;
 	//width: 100%;
 	//max-width: 1024px - $tile-width - $ticket-region-width;
-
+	.content {
+		display: flex;
+		justify-content: center;
+	}
 }
 .section-second {
 	//#time ::slotted(*), #location ::slotted(*), #price ::slotted(*), #link ::slotted(*) {
@@ -144,8 +152,8 @@ $ticket-region-width: 250px;
 		height: 120px;
 		width: 120px;
 		display: block;
-		flex-wrap: wrap;
-		justify-content: center;
+		//flex-wrap: wrap;
+		//justify-content: center;
 		background: $lightgray;
 		margin-bottom: 15px;
 	}
