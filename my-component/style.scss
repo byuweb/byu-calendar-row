@@ -51,14 +51,22 @@ $ticket-region-width: 250px;
 }
 #location ::slotted(*) {
 	font-size: 14px;
+	padding: 4px 0px;
 	text-transform: uppercase;
 }
+.price-label ,
 #price ::slotted(*) {
 	font-weight: bold;
 	color: $green;
 }
+#time {
+	padding: 6px 0px;
+	margin: 0px;
+}
 #time ::slotted(*) {
 	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
 	text-transform: uppercase;
 }
 #tickets-link ::slotted(*) {
@@ -89,9 +97,8 @@ $ticket-region-width: 250px;
 
 }
 .section-second {
-	#time ::slotted(*), #location ::slotted(*), #price ::slotted(*), #link ::slotted(*) {
-		padding: 4px 0px;
-	}
+	//#time ::slotted(*), #location ::slotted(*), #price ::slotted(*), #link ::slotted(*) {
+
 }
 #title ::slotted(*) {
 	//font-family: "Sentinel A", "Sentinel B";
@@ -195,6 +202,7 @@ $ticket-region-width: 250px;
 	}
 	#link ::slotted(*) {
 		color: $navy;
+		padding: 4px 0px;
 		text-decoration: none;
 	}
 
