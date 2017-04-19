@@ -22,7 +22,7 @@ initWcBuild(gulp, {
     componentName: 'byu-calendar-row',
     js: {
         input: './my-component/script.js'
-    }
+    }, // needs comma if css section is enabled
      //if FOUC is added later, then specify that stylesheet here, to load styling before component loads
     css: {
         input: './my-component/byu-calendar-row.scss'
