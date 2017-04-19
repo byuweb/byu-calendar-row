@@ -99,10 +99,7 @@ $ticket-region-width: 250px;
 	//align-self: flex-start;
 	//width: 100%;
 	//max-width: 1024px - $tile-width - $ticket-region-width;
-	.content {
-		display: flex;
-		justify-content: center;
-	}
+
 }
 .section-second {
 	//#time ::slotted(*), #location ::slotted(*), #price ::slotted(*), #link ::slotted(*) {
@@ -156,6 +153,10 @@ $ticket-region-width: 250px;
 		//justify-content: center;
 		background: $lightgray;
 		margin-bottom: 15px;
+		.content {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	.section-second ::slotted(*) {
