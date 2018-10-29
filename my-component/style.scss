@@ -1,11 +1,11 @@
 //import fonts
-//@import "https://cloud.typography.com/75214/6517752/css/fonts.css";
+//@import "https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css";
 $weight: bold;
 // colors
 $navy: #002E5D;
 $lightgray: #e5e5e5;
 $medblue: #869DB5;
-$medgray: #767676;
+$medgray: #666;
 $green: #4d8501; // works w accessibility
 
 $tile-width: 120px;
@@ -34,10 +34,10 @@ $ticket-region-width: 250px;
 }
 :host .content {
 	width: 100%;
-	font-family: "Gotham A", "Gotham B";
+	font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
 }
 :host ::slotted(*){
-	font-family: "Gotham A", "Gotham B";
+	font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
 }
 
 // general sections styling
@@ -106,7 +106,7 @@ $ticket-region-width: 250px;
 
 }
 #title ::slotted(*) {
-	//font-family: "Sentinel A", "Sentinel B";
+	//font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
 	line-height: 1.2;
 }
 
@@ -231,10 +231,10 @@ $ticket-region-width: 250px;
 
 
 p, div, a {
-	font-family: "Gotham A", "Gotham B";
+	font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
 }
 h1, h2, h3, h4 {
-	font-family: "Sentinel A", "Sentinel B";
+	font-family: "HCo Ringside Narrow SSm", Arial, sans-serif;
 }
 
 
